@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    --additional: #1E1E1E;
+    --main: #8763A8;
+}
+
+.background-dark {
+    background: var(--additional);
+}
+
+.background-main {
+    background: var(--main);
+}
+
+.back-block {
+    width: 50em;
+    height: 20em;
+    right:-10em
+}
