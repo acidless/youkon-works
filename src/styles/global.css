@@ -11,7 +11,10 @@
     font-family: 'JetBrains Mono', monospace;
 
     --additional: #1E1E1E;
+    --additional-darken: #111111;
+
     --main: #8763A8;
+    --main-darken: #5f3a73;
 }
 
 body {
@@ -41,6 +44,22 @@ h2:before {
 
 textarea {
     max-height: 500px;
+}
+
+button {
+    transition: transform 0.3s, background 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button.background-main:hover{
+    background: var(--main-darken);
+}
+
+button.background-dark:hover{
+    background: var(--additional-darken);
 }
 
 .about {
