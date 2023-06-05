@@ -14,6 +14,39 @@
     --main: #8763A8;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    position: relative;
+}
+
+h2 {
+    padding-left: 30px;
+}
+
+h2:before {
+    content: "";
+    width: 25px;
+    height: 7px;
+    background: var(--main);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+textarea {
+    max-height: 500px;
+}
+
+.about {
+    margin-top: 15em;
+}
+
 .background-dark {
     background: var(--additional);
 }
@@ -22,8 +55,31 @@
     background: var(--main);
 }
 
-.back-block {
+.back-block, .back-block-2 {
     width: 50em;
-    height: 20em;
-    right:-10em
+    height: 30em;
+    right: -12em;
+}
+
+.back-block-2 {
+    bottom: -20em;
+}
+
+.service:first-child {
+    background: var(--additional);
+}
+
+.service:nth-child(2) {
+    background: var(--main);
+}
+
+.service:last-child {
+    background: var(--additional);
+}
+
+.project span {
+    position: absolute;
+    background: var(--main);
+    right: -0.25em;
+    bottom: 0.75em;
 }
