@@ -54,12 +54,16 @@ button:hover {
     transform: scale(1.1);
 }
 
-button.background-main:hover{
+button.background-main:hover {
     background: var(--main-darken);
 }
 
-button.background-dark:hover{
+button.background-dark:hover {
     background: var(--additional-darken);
+}
+
+.container {
+    padding: 0 20px;
 }
 
 .about {
@@ -101,4 +105,57 @@ button.background-dark:hover{
     background: var(--main);
     right: -0.25em;
     bottom: 0.75em;
+}
+
+@media screen and (max-width: 1280px) {
+    .services .grid, .last-projects .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project:first-child, .service:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .last-projects .grid .project {
+        margin-top: 0 !important;
+    }
+
+    .back-block, .back-block-2 {
+        right: -24em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .back-block, .back-block-2 {
+        right: -36em;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header .logo{
+        left:3em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .services .grid, .last-projects .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leave-message form {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .back-block, .back-block-2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html{
+        font-size: 10px;
+    }
 }
