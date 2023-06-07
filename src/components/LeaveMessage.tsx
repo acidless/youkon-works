@@ -5,7 +5,8 @@ function LeaveMessage() {
         <h2 className="mb-5 text-2xl">Оставить сообщение</h2>
         <form className="inline-block">
             <div className="fields-wrapper mb-5 flex">
-                <input className="border mr-5 px-2 py-1 rounded-md border-zinc-300 flex-1 min-w-0" type="text" name="name"
+                <input className="border mr-5 px-2 py-1 rounded-md border-zinc-300 flex-1 min-w-0" type="text"
+                       name="name"
                        placeholder="Имя"/>
                 <input className="border px-2 py-1 rounded-md border-zinc-300 flex-1 min-w-0" type="email" name="email"
                        placeholder="Почта"/>
