@@ -11,6 +11,7 @@ import telegram from "../images/telegram.svg";
 import vk from "../images/vk.svg";
 import discord from "../images/discord.svg";
 import whatsapp from "../images/whatsapp.svg";
+import logo from "../images/logo.svg";
 
 const IndexPage: React.FC<PageProps> = () => {
   const [isContactWindowActive, setContactWindowActive] = useState(false);
@@ -79,6 +80,7 @@ export function Head() {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
       />
+      <link rel="icon" type="image/x-icon" href={logo} />
     </>
   );
 }
