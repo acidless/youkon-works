@@ -4,7 +4,11 @@ import { Link } from "gatsby";
 import NavComponent from "./NavComponent";
 import { useState } from "react";
 
-function Header() {
+type PropsType = {
+  setContactWindowActive: (val: boolean) => void;
+};
+
+const Header: React.FC<PropsType> = function ({ setContactWindowActive }) {
   const [isNavActive, setNavActive] = useState(false);
 
   return (
@@ -15,7 +19,10 @@ function Header() {
           <img src={logo} alt="" />
         </Link>
       </div>
-      <button className="header__contact ml-auto background-dark py-2 px-20 text-white select-none rounded-lg text-xl">
+      <button
+        onClick={() => setContactWindowActive(true)}
+        className="header__contact ml-auto background-dark py-2 px-20 text-white select-none rounded-lg text-xl"
+      >
         Связаться
       </button>
       <button
@@ -27,6 +34,6 @@ function Header() {
       <div className="back-block background-main absolute rounded-full -rotate-45 -z-10 "></div>
     </header>
   );
-}
+};
 
 export default Header;

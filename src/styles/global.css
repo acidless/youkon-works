@@ -1,3 +1,5 @@
+@import "messageWindow.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -46,11 +48,11 @@ textarea {
     max-height: 500px;
 }
 
-button {
+button, .button {
     transition: transform 0.3s, background 0.3s ease-in-out;
 }
 
-button:hover {
+button:hover, .button:hover {
     transform: scale(1.1);
 }
 
@@ -67,6 +69,7 @@ button.background-dark:hover {
 }
 
 .nav__close {
+    display: none;
     position: absolute;
     top: 0.5em;
     right: 0.5em;
@@ -96,6 +99,10 @@ button.background-dark:hover {
 
 .back-block-2 {
     bottom: -20em;
+}
+
+.service .material-symbols-outlined {
+    font-size: 8rem !important;
 }
 
 .service:first-child {
@@ -162,6 +169,10 @@ button.background-dark:hover {
 
     .nav.active {
         left: 1em;
+    }
+
+    .nav.active .nav__close {
+        display: inline-block;
     }
 
     header .logo {

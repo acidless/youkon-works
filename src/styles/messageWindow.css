@@ -1,0 +1,53 @@
+.message-window-wrapper {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s opacity ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-window-wrapper.scrollable .message-window {
+     overflow-y: auto;
+ }
+
+.message-window-wrapper.active {
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.message-window-wrapper.active .message-window {
+    transform: scale(1);
+}
+
+.message-window-wrapper.active .window-content,
+.message-window-wrapper.active .message-window-wrapper__content {
+     visibility: visible;
+ }
+
+.message-window {
+    min-width: 40em;
+    max-height: 100vh;
+    transition: 0.3s all ease-in-out;
+}
+
+.message-window .window-content {
+    border-radius: 1em;
+    padding: 2em;
+    background: white;
+    box-shadow: 10px 10px 10px -9px rgba(0, 0, 0, 0.71);
+    visibility: hidden;
+}
+
+@media screen and (max-width: 340px) {
+    .message-window {
+        min-width: 30em !important;
+    }
+}
